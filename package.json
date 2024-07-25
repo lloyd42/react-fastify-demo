@@ -1,0 +1,38 @@
+{
+  "name": "react-fastify-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "web": "pnpm -C apps/web dev",
+    "api": "pnpm -C apps/api dev",
+    "lint": "eslint --cache --ext .js,.ts,.tsx",
+    "format": "prettier --write --cache .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,vue}": [
+      "echo 'lint or prettier'",
+      "eslint --ext .js,.ts,.tsx,.vue --fix",
+      "prettier --write"
+    ]
+  },
+  "keywords": [],
+  "author": "lloyd42",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  }
+}
